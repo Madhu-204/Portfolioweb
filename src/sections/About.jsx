@@ -36,7 +36,7 @@ export default function About() {
               {/* Bottom Card Title Overlay */}
               <div className="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-[#05050A] via-[#05050A]/70 to-transparent">
                 <h3 className="font-serif text-xl text-white">Madhumita Ghosh</h3>
-                <p className="font-mono text-xs text-purple-400 mt-1">AI Trainee • Backend Dev</p>
+                <p className="font-mono text-xs text-purple-400 mt-1">AI Engineer • Backend Dev</p>
               </div>
             </div>
 
