@@ -18,7 +18,7 @@ export default function Navbar() {
 
         {/* Logo brand */}
         <a href="#" className="flex items-center gap-2 font-mono text-sm tracking-wide font-bold group">
-          <span className="text-purple-500">&gt;_</span> <span className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">Madhumita</span>
+          <span className="text-purple-500">&gt;_</span> <span className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">@madhumita.dev</span>
         </a>
 
         {/* Desktop Links */}

@@ -10,7 +10,7 @@ const stats = [
 
 const terminalLines = [
   { prefix: '>>>', color: 'blue', text: 'import madhumita', result: null },
-  { prefix: '>>>', color: 'blue', text: 'madhumita.role', result: "'AI Trainee | Python & Backend Developer'" },
+  { prefix: '>>>', color: 'blue', text: 'madhumita.role', result: "'AI Engineer | Python & Backend Developer'" },
   { prefix: '>>>', color: 'blue', text: 'madhumita.cgpa', result: '9.75' },
   { prefix: '>>>', color: 'blue', text: 'madhumita.status', result: "'Available immediately • Open to relocation ✓'" }
 ];
@@ -89,7 +89,7 @@ export default function Hero({ isLoaded = false }) {
           Hi, I'm <span className="text-purple-400">Madhumita.</span>
         </h1>
         <h2 className={`text-lg sm:text-xl font-mono text-purple-300 font-medium mb-6 ml-3 ${isLoaded ? 'hero-animate-delay-2' : ''}`}>
-          AI Trainee • Python & Backend Developer
+          AI Engineer • Python & Backend Developer
         </h2>
 
         <p className={`text-gray-400 text-base sm:text-lg max-w-2xl leading-relaxed mb-8 ml-3 ${isLoaded ? 'hero-animate-delay-2' : ''}`}>
@@ -109,7 +109,7 @@ export default function Hero({ isLoaded = false }) {
         {/* Social Icons below buttons */}
         <div className={`flex items-center gap-2 mt-6 ml-3 ${isLoaded ? 'hero-animate-delay-4' : ''}`}>
           <a
-            href="https://github.com"
+            href="https://github.com/Madhu-204"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 rounded-lg bg-gray-900/40 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-purple-600/30 transition-all duration-200"
@@ -117,7 +117,7 @@ export default function Hero({ isLoaded = false }) {
             <GithubIcon size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/madhumita-ghosh-1a75b7264"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 rounded-lg bg-gray-900/40 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-purple-600/30 transition-all duration-200"
@@ -125,13 +125,13 @@ export default function Hero({ isLoaded = false }) {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
           <a
-            href="mailto:hello@madhumita.dev"
+            href="mailto:mahighosh149@gmail.com"
             className="w-12 h-12 rounded-lg bg-gray-900/40 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-purple-600/30 transition-all duration-200"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </a>
           <a
-            href="tel:+1234567890"
+            href="tel:+919833641469"
             className="w-12 h-12 rounded-lg bg-gray-900/40 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-purple-600/30 transition-all duration-200"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>

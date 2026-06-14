@@ -286,3 +286,17 @@ html {
 .float-animation {
   animation: float 3s ease-in-out infinite;
 }
+
+/* Fade in out animation for availability text */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-fade-in-out {
+  animation: fadeInOut 2s ease-in-out infinite;
+}

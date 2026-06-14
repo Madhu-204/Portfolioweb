@@ -14,8 +14,8 @@ const designProjects = [
       'Accessibility-first design with performance optimization at every layer'
     ],
     tags: ['FastAPI', 'PostgreSQL', 'Flutter', 'OpenCV', 'OCR', 'Python'],
-    liveLink: '#',
-    codeLink: '#',
+    liveLink: 'https://github.com/Madhu-204/VOCASIGHT',
+    codeLink: 'https://github.com/Madhu-204/VOCASIGHT',
     image: '/vocasight.png'
   },
   {
@@ -30,8 +30,8 @@ const designProjects = [
       'Smooth transitions and modern dark UI theme'
     ],
     tags: ['React', 'Tailwind CSS', 'Vite', 'Lucide React'],
-    liveLink: '#',
-    codeLink: '#',
+    liveLink: 'https://github.com/Madhu-204/Portfolioweb',
+    codeLink: 'https://github.com/Madhu-204/Portfolioweb',
     image: '/portfolio.png'
   }
 ];
