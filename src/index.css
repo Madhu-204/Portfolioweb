@@ -1,11 +1,24 @@
 @import "tailwindcss";
 
 @layer base {
+  * {
+    cursor: default;
+  }
+
   body {
-    background-color: #05050A;
+    background: linear-gradient(to right, #1a0a2e 0%, #0d0d1a 30%, #05050A 60%, #000000 100%);
     color: #F3F4F6;
     font-family: 'Inter', system-ui, sans-serif;
     overflow-x: hidden;
+  }
+
+  /* Interactive cursor */
+  a, button, [role="button"], input, select, textarea {
+    cursor: pointer;
+  }
+
+  a:hover, button:hover, [role="button"]:hover {
+    cursor: pointer;
   }
 }
 
@@ -22,4 +35,254 @@
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Custom Cursor Dot */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #7C3AED;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+/* Slide in left animation for tags */
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.3s ease-out forwards;
+}
+
+.cursor-dot.hovering {
+  transform: scale(3);
+  opacity: 0.5;
+}
+
+/* Custom Cursor Ring */
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(124, 58, 237, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.15s ease-out, opacity 0.2s ease;
+}
+
+.cursor-ring.hovering {
+  transform: scale(1.5);
+  border-color: #7C3AED;
+}
+
+/* Hide default cursor on desktop */
+@media (hover: hover) {
+  .hide-default-cursor {
+    cursor: none;
+  }
+}
+
+/* Wave hover effect for nav links */
+@keyframes wave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-wave {
+  animation: wave 0.6s ease-in-out;
+}
+
+/* Sinusoidal wave hover effect for nav links */
+@keyframes sine-wave {
+  0% {
+    transform: translateX(-50%) skewX(-15deg);
+  }
+  50% {
+    transform: translateX(0%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(50%) skewX(-15deg);
+  }
+}
+
+.animate-sine-wave {
+  animation: sine-wave 1.2s ease-in-out infinite;
+}
+
+/* Water wave splash effect for nav links */
+.water-wave-1 {
+  animation: waterSplash1 0.8s ease-out forwards;
+}
+
+.water-wave-2 {
+  animation: waterSplash2 0.9s ease-out 0.1s forwards;
+}
+
+.water-wave-3 {
+  animation: waterSplash3 1s ease-out 0.2s forwards;
+}
+
+@keyframes waterSplash1 {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100%) scaleX(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes waterSplash2 {
+  0% {
+    transform: translateY(0) scaleX(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100%) scaleX(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes waterSplash3 {
+  0% {
+    transform: translateY(0) scaleX(1.4);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(100%) scaleX(2);
+    opacity: 0;
+  }
+}
+
+/* Fade In Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Hero Initial Animation */
+.hero-animate {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-animate-delay {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.hero-animate-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.hero-animate-delay-3 {
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.hero-animate-delay-4 {
+  animation: fadeInUp 0.8s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+/* Scroll-triggered section animations */
+.section-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-animate-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-animate-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.section-animate-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-animate-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Floating animation for CGPA badge */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
 }

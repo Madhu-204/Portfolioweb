@@ -25,12 +25,12 @@ export default function About() {
         {/* Left Side: Avatar Card Infrastructure */}
         <div className="lg:col-span-4 space-y-6">
           <div className="relative group rounded-2xl overflow-hidden border border-purple-500/10 bg-[#0B0B14] p-3">
-            <div className="aspect-square w-full rounded-xl bg-gradient-to-tr from-purple-900/40 to-gray-800 relative overflow-hidden">
+            <div className="w-full rounded-xl bg-gradient-to-tr from-purple-900/40 to-gray-800 relative overflow-hidden" style={{ height: '320px' }}>
               {/* Replace with your local project asset: src/assets/profile.jpg */}
-              <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
+              <img
+                src="/profile.jpeg"
                 alt="Madhumita Ghosh"
-                className="w-full h-full object-cover grayscale contract-125 hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-contain grayscale contract-125 hover:grayscale-0 transition-all duration-500"
               />
               
               {/* Bottom Card Title Overlay */}
@@ -41,7 +41,7 @@ export default function About() {
             </div>
 
             {/* Floating Live Floating Mini-Terminal Tag */}
-            <div className="absolute bottom-4 -right-2 bg-[#07070D] border border-purple-500/30 font-mono p-2.5 rounded-lg text-[10px] sm:text-xs shadow-2xl tracking-tight select-none">
+            <div className="absolute bottom-4 -right-2 bg-[#07070D] border border-purple-500/30 font-mono p-2.5 rounded-lg text-[10px] sm:text-xs shadow-2xl tracking-tight select-none float-animation">
               <span className="text-purple-400">cgpa = </span>
               <span className="text-amber-400">9.75</span>
               <div className="text-emerald-400 mt-0.5">print("<span className="text-amber-400">🏆</span> Top Rank")</div>
@@ -87,7 +87,7 @@ export default function About() {
           {/* Core Embedded Row Row Grid Counters Metrics Block */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6">
             {stats.map((stat, i) => (
-              <div key={i} className="bg-[#0B0B14] border border-purple-500/5 rounded-xl p-4 text-center group hover:border-purple-500/20 transition-all">
+              <div key={i} className="bg-[#0B0B14] border border-purple-500/30 rounded-xl p-4 text-center group hover:border-purple-500/60 transition-all shadow-[0_0_10px_rgba(168,85,247,0.15)] hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]">
                 <div className="font-serif text-2xl sm:text-3xl text-purple-400 mb-1 group-hover:scale-105 transition-transform duration-200">
                   {stat.value}
                 </div>

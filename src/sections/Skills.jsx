@@ -9,6 +9,7 @@ const skillsDataset = [
     description: 'Building intelligent systems that see, understand, and respond.',
     icon: Brain,
     tags: ['Machine Learning', 'OpenCV', 'OCR Integration', '+3 more'],
+    expandedTags: ['Machine Learning', 'OpenCV', 'OCR Integration', 'Real-time Image Processing', 'AI Model Integration', 'Computer Vision'],
     colorClass: 'text-purple-400'
   },
   {
@@ -17,6 +18,7 @@ const skillsDataset = [
     description: 'Scalable, production-grade Python backends that handle real load.',
     icon: Cpu,
     tags: ['FastAPI', 'Django', 'REST API', '+4 more'],
+    expandedTags: ['FastAPI', 'Django', 'REST API', 'Microservices', 'API Gateway', 'JWT Authentication', 'Uvicorn'],
     colorClass: 'text-blue-400'
   },
   {
@@ -25,6 +27,7 @@ const skillsDataset = [
     description: 'Python is home. Dart for mobile. SQL for the data beneath.',
     icon: Code,
     tags: ['Python', 'Dart', 'SQL'],
+    expandedTags: ['Python', 'Dart', 'SQL'],
     colorClass: 'text-emerald-400'
   },
   {
@@ -33,6 +36,7 @@ const skillsDataset = [
     description: 'From mobile apps to web interfaces — I connect front to back.',
     icon: Layout,
     tags: ['Flutter', 'React', 'Responsive UI', '+1 more'],
+    expandedTags: ['Flutter', 'React', 'Responsive UI', 'Frontend Integration'],
     colorClass: 'text-teal-400'
   },
   {
@@ -41,6 +45,7 @@ const skillsDataset = [
     description: 'The toolbox that keeps development clean, fast, and collaborative.',
     icon: Wrench,
     tags: ['Git', 'GitHub', 'Postman', '+3 more'],
+    expandedTags: ['Git', 'GitHub', 'Postman', 'PostgreSQL', 'Virtual Environments', 'DevOps basics'],
     colorClass: 'text-amber-400'
   },
   {
@@ -49,6 +54,7 @@ const skillsDataset = [
     description: 'The fundamentals that make the difference between code and engineering.',
     icon: Lightbulb,
     tags: ['System Design', 'API Architecture', 'OOP', '+3 more'],
+    expandedTags: ['System Design', 'API Architecture', 'OOP', 'Debugging', 'Performance Optimization', 'Analytical Problem-Solving'],
     colorClass: 'text-yellow-400'
   }
 ];
@@ -77,7 +83,7 @@ export default function Skills() {
       {/* Horizontal Persona Soft Highlight Pills Badge Row */}
       <div className="flex flex-wrap gap-2 pb-2">
         {['✦ Strong Communicator', '✦ Fast Learner', '✦ Team Player', '✦ Adaptable', '✦ Detail-Oriented'].map((pill, idx) => (
-          <span key={idx} className="text-[11px] font-mono px-3 py-1.5 rounded-full bg-purple-950/20 border border-purple-500/10 text-purple-300/90 font-medium">
+          <span key={idx} className="text-[11px] font-mono px-3 py-1.5 rounded-full bg-purple-600/20 border border-purple-400 text-purple-400 font-medium shadow-[0_0_10px_rgba(168,85,247,0.3)]">
             {pill}
           </span>
         ))}

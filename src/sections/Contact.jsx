@@ -16,8 +16,11 @@ export default function Contact() {
       <div className="space-y-2">
         <div className="font-mono text-xs text-purple-500 font-bold tracking-widest">06 / CONTACT</div>
         <h2 className="text-3xl sm:text-5xl font-serif text-white">
-          Commit your <span className="text-purple-400 italic font-normal">message</span>
+          Let's <span className="text-purple-400 italic font-normal">connect</span>
         </h2>
+        <p className="text-sm text-gray-400 font-mono">
+          Actively seeking opportunities — internships, full-time AI/backend roles, or collaborations. I respond within 24 hours.
+        </p>
       </div>
 
       <div className="max-w-2xl mx-auto">

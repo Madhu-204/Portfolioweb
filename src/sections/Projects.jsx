@@ -3,22 +3,36 @@ import ProjectCard from '../components/ProjectCard';
 
 const designProjects = [
   {
-    title: 'VocaSight: Voice Assistant for Visually Impaired',
-    type: 'AI & Full-Stack Application',
-    description: 'An inclusive accessibility platform integrating YOLOv8 obstacle alerts, automated optical character recognition (OCR), and fluid text-to-speech audio outputs.',
-    tags: ['FastAPI', 'PostgreSQL', 'Flutter', 'YOLOv8', 'OCR'],
+    title: 'VocaSight',
+    subtitle: 'AI-Powered Voice Assistant for Visually Impaired',
+    type: 'Full-stack AI Application',
+    description: 'Full-stack AI application that gives visually impaired users a voice-controlled way to read the world around them using OCR and text-to-speech.',
+    fullDescription: [
+      'Built end-to-end ML workflow: voice command → camera input → text extraction → audio response',
+      'Implemented OCR-based text detection with OpenCV and text-to-speech output',
+      'Designed scalable FastAPI backend handling real-time image processing and data flow',
+      'Accessibility-first design with performance optimization at every layer'
+    ],
+    tags: ['FastAPI', 'PostgreSQL', 'Flutter', 'OpenCV', 'OCR', 'Python'],
     liveLink: '#',
     codeLink: '#',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop'
+    image: '/vocasight.png'
   },
   {
-    title: 'High-Performance EdTech Startup Engine',
-    type: 'Backend Architecture',
-    description: 'Engineered a clean API infrastructure optimized to seamlessly handle real-time streaming services, automated user data evaluation, and dashboard analytics for over 2,000 concurrent students.',
-    tags: ['Python', 'FastAPI', 'REST APIs', 'System Design'],
+    title: 'Portfolioweb',
+    subtitle: 'Personal Portfolio Website',
+    type: 'React Application',
+    description: 'A modern, responsive portfolio website showcasing skills, projects, and experience with a sleek dark theme and interactive components.',
+    fullDescription: [
+      'Built with React and Tailwind CSS for responsive design',
+      'Interactive skill cards withexpand/collapse animations',
+      'Project cards with hover effects revealing full details',
+      'Smooth transitions and modern dark UI theme'
+    ],
+    tags: ['React', 'Tailwind CSS', 'Vite', 'Lucide React'],
     liveLink: '#',
     codeLink: '#',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop'
+    image: '/portfolio.png'
   }
 ];
 
@@ -29,8 +43,9 @@ export default function Projects() {
         <div className="space-y-2">
           <div className="font-mono text-xs text-purple-500 font-bold tracking-widest">03 / PROJECTS</div>
           <h2 className="text-3xl sm:text-5xl font-serif text-white">
-            Selected engineering <span className="text-purple-400 italic font-normal">crafts</span>
+            Things I've <span className="text-purple-400 italic font-normal">built</span>
           </h2>
+          <p className="text-sm text-gray-400 font-mono">Hover the cards to see the full story. Click GitHub to explore the code.</p>
         </div>
         <a href="#" className="font-mono text-xs text-purple-400 hover:text-purple-300 border-b border-purple-500/20 pb-1 w-fit transition-all">
           View all archive files &gt;

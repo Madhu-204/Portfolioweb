@@ -4,33 +4,54 @@ import { Briefcase, GraduationCap, Calendar } from 'lucide-react';
 const timelineEntries = [
   {
     type: 'work',
-    role: 'Backend Developer Intern',
+    role: 'Python & Backend Development Intern',
     organization: 'WeSalvator',
-    duration: '6 Months',
-    bullets: [
-      'Developed modern backend microservices with Python and FastAPI.',
-      'Contributed to centralized corporate API-Gateway management structures.',
-      'Managed Leader Dashboard pipelines and remote engineering task states using corporate Git workflows.'
-    ]
+    duration: 'Jan 2026 – Jun 2026',
+    subtitle: 'Role: Python & Django Developer',
+    bulletDetails: [
+      'Designed and developed scalable backend systems using FastAPI and microservices architecture for production-grade applications',
+      'Built and integrated RESTful APIs supporting real-time application workflows, improving system responsiveness',
+      'Contributed to an API Gateway handling authentication (JWT), routing, and inter-service communication',
+      'Applied system design principles — modular architecture, service separation, and performance optimization',
+      'Worked with DevOps practices including environment setup, debugging, and resolving production-level issues',
+      'Collaborated on backend-frontend integration with React-based interfaces'
+    ],
+    tags: ['FastAPI', 'Django', 'JWT', 'REST API', 'Microservices', 'PostgreSQL', 'React']
   },
   {
     type: 'education',
-    role: 'B.E. in Computer Science (AI & ML)',
+    role: 'B.E. Computer Science & Engineering (AI & ML)',
     organization: 'Smt. Indira Gandhi College of Engineering',
-    duration: '2022 - 2026',
-    bullets: [
-      'Maintained a top-tier academic standing of 9.75 CGPA.',
-      'Focused extensively on neural architecture arrays, advanced computer vision tracking, and data systems.'
-    ]
+    duration: '2022 – 2026',
+    subtitle: 'No academic gaps · Completing within stipulated duration',
+    bulletDetails: [
+      'Specialization in Artificial Intelligence & Machine Learning',
+      'Top academic performer — 9.75 CGPA',
+      'Final-year project: AI-powered accessible applications'
+    ],
+    tags: ['AI', 'ML', 'Python', 'System Design', 'DBMS', 'OS']
   },
   {
     type: 'education',
-    role: 'Higher Secondary School Certificate (HSC)',
-    organization: 'Maharashtra State Board',
-    duration: 'Completed',
-    bullets: [
-      'Specialized academic baseline tracks in core Science, Advanced Mathematics, and Computer Science streams.'
-    ]
+    role: 'Higher Secondary (12th)',
+    organization: 'Amrita Vidyalayam',
+    duration: '2022',
+    subtitle: 'Science stream',
+    bulletDetails: [
+      'Science stream with Mathematics and Computer Science'
+    ],
+    tags: []
+  },
+  {
+    type: 'education',
+    role: 'Secondary School (10th)',
+    organization: 'Amrita Vidyalayam',
+    duration: '2020',
+    subtitle: 'Strong academic foundation',
+    bulletDetails: [
+      'Consistent academic performance — 89% aggregate'
+    ],
+    tags: []
   }
 ];
 
@@ -40,7 +61,7 @@ export default function Experience() {
       <div className="space-y-2">
         <div className="font-mono text-xs text-purple-500 font-bold tracking-widest">04 / EXPERIENCE & EDUCATION</div>
         <h2 className="text-3xl sm:text-5xl font-serif text-white">
-          My professional <span className="text-purple-400 italic font-normal">trajectory</span>
+          Where I've <span className="text-purple-400 italic font-normal">grown</span>
         </h2>
       </div>
 
@@ -62,6 +83,7 @@ export default function Experience() {
                       {item.role}
                     </h3>
                     <p className="font-mono text-xs text-gray-400 mt-0.5">{item.organization}</p>
+                    {item.subtitle && <p className="font-mono text-xs text-purple-400/80 mt-0.5">{item.subtitle}</p>}
                   </div>
                   <div className="flex items-center gap-1.5 font-mono text-[10px] text-amber-400/90 bg-amber-500/5 border border-amber-500/10 px-2 py-1 rounded w-fit h-fit whitespace-nowrap">
                     <Calendar size={11} />
@@ -70,13 +92,25 @@ export default function Experience() {
                 </div>
 
                 {/* Sub Bullet Details Segment */}
-                <ul className="space-y-2 text-xs sm:text-sm text-gray-400 list-disc list-inside marker:text-purple-500/60 font-sans leading-relaxed">
-                  {item.bullets.map((bullet, idx) => (
-                    <li key={idx} className="pl-1 text-indent-sm">
-                      <span className="relative -left-1.5 text-gray-400">{bullet}</span>
+                <ul className="space-y-1 text-xs sm:text-sm text-gray-400 font-sans leading-relaxed">
+                  {item.bulletDetails && item.bulletDetails.map((bullet, idx) => (
+                    <li key={idx} className="pl-1 flex items-start gap-2">
+                      <span className="text-purple-400 mt-0.5">▸</span>
+                      {bullet}
                     </li>
                   ))}
                 </ul>
+
+                {/* Tags */}
+                {item.tags && item.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 pt-2">
+                    {item.tags.map((tag, idx) => (
+                      <span key={idx} className="text-[10px] font-mono px-2 py-0.5 rounded text-purple-300 font-bold border border-purple-400/20 bg-purple-600/10">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           );

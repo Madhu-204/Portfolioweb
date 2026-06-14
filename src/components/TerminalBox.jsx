@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function TerminalBox({ title, children, className = "" }) {
   return (
-    <div className={`w-full rounded-xl border border-purple-500/10 bg-[#0B0B14] shadow-2xl overflow-hidden font-mono text-sm ${className}`}>
+    <div className={`w-full rounded-xl border border-purple-500/30 bg-[#0B0B14] shadow-[0_0_30px_rgba(168,85,247,0.25),0_0_60px_rgba(168,85,247,0.1)] overflow-hidden font-mono text-sm ${className}`}>
       {/* Window Window Header Header Strip */}
       <div className="flex items-center justify-between bg-[#07070D] px-4 py-3 border-b border-purple-500/5 select-none">
         <div className="flex items-center gap-1.5">
