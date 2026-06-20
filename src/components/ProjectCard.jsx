@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ExternalLink, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import GithubIcon from './GithubIcon';
 
-export default function ProjectCard({ title, subtitle, type, description, fullDescription, tags, liveLink, codeLink, image }) {
+export default function ProjectCard({ title, subtitle, type, description, fullDescription, tags, codeLink, image }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -65,9 +65,6 @@ export default function ProjectCard({ title, subtitle, type, description, fullDe
 
           {/* Action Trigger Buttons */}
           <div className="flex items-center gap-3 pt-2 font-mono text-xs sm:text-sm border-t border-purple-500/5">
-            <a href={liveLink || "#"} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-purple-400 hover:text-purple-300 transition-colors">
-              <ExternalLink size={14} /> Case Study
-            </a>
             <a href={codeLink || "#"} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-gray-400 hover:text-white transition-colors ml-auto">
               <GithubIcon size={14} /> View Code
             </a>
